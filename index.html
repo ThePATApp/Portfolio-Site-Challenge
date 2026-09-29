@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Lauren Gregory - Dev Portfolio</title>
+  </head>
+  <body>
+    <header class="site_header">
+      <div class="wrapper_inner">
+        <nav class="site_header_nav">
+          <ul role="list" class="flex flex_center">
+            <li><a href="#0">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#work">WORK</a></li>
+            <li><a href="#travel">TRAVEL</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="hero">
+        <div class="wrapper">
+          <div class="wrapper_inner">
+            <div class="text_center hero_content">
+              <p id="greeting" class="hero_greeting"> Hello &amp; Welcome!</p>
+              <h1 class="h2">Lauren Gregory</h1>
+              <p class="h5">Junior Developer</p>
+              <p class="hero_subtitle">Women's Health &amp; Technology</p>
+            </div>
+          </div>
+          <ul role="list" class="flex flex_between hero_social">
+            <address>Atlanta, Georgia</address>
+            <ul role="list" class="flex">
+              <li>Find me online</li>
+              <li>
+                <a href="https://github.com/ThePATApp/first_repo_TEST" target="_blank">
+                  <img src="GitHub Icon.png" alt="GitHub" width="50" height="50" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/lauren-a-gregory/" target="_blank">
+                  <img src="LinkedIn Icon.jpeg" alt="LinkedIn" width="50" height="50" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@ThePAT.App1" target="_blank">
+                  <img src="YouTube Icon.jpeg" alt= "YouTube" width="50" height="50" />
+                </a>
+              </li>  
+            </ul>
+          </ul>
+        </div>
+      </section>
+    </main>
+   <section id="about">
+  <div class="wrapper">
+      <div class="about_content flex flex_center">
+        <figure class="about_figure text_center">
+          <img width="300px" height="300px" src="IMG_3488.jpg" alt="Developer" class="about_img" />
+          <figcaption class="about_caption">Lauren</figcaption>
+        </figure>
+                <p class="about_bio">
+          I'm pivoting my career in the tech industry to advance my skill set, expand my thinking, and work to build tools that make the world better. In the future, I'm looking forward to exploring roles in <strong>software development</strong>, <strong>product design</strong>, and <strong>UX/UI design</strong>.
+        </p>
+      </div>
+    </div>
+   </section>
+   <section id="work">
+  <div class="wrapper_inner">
+    <div class="text_center">
+      <h4 class="h5">
+        Here are a few projects I've been working on to start my coding journey.</h4>
+      <ul role="list" class="work_logos flex flex_center">
+        <li>
+          <img src="2_Computer Basics Completed.png" alt="Computer Basics" />
+          <p class="work_title">Computer Basics</p>
+        </li>
+        <li>
+          <img src="3_HTML Completed.png" alt="HTML" />
+          <p class="work_title">HTML</p>
+        </li>
+        <li>
+          <img
+            src="4_Semantic HTML Completed.png" alt="Semantic HTML" />
+          <p class="work_title">Semantic HTML</p>
+        </li>
+        <li>
+          <img src="PatLogo_WARM_GRADIENT.png" alt="The PAT App" />
+          <p class="work_title">The PAT App</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </section>
+  <section id="travel">
+  <div class="wrapper">
+    <div class="text_center">
+      <h2 class="h5">A place I'd love to travel</h2>
+    </div>
+    <div class="wrapper_inner">
+      <div class="travel_card">
+        <img src="Japan_image.jpeg" alt="Japan" class="travel_img" />
+        <div class="travel_info text_center">
+          <h3>Japan</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+<section id="contact">
+  <div class="wrapper">
+    <div class="text_left">
+      <p>
+        Want to work together? <br />
+        I'd love to hear from you.
+      </p>
+    </div>
+    <div class="wrapper_inner">
+      <h5 class="h3">Contact Me</h5>
+      <form action="mailto:lauren@thepat.app" method="post" enctype="text/plain" class="contact_form">
+        <div class="flex">
+          <div class="form_group">
+            <label for="name">NAME</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div class="form_group">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" />
+          </div>
+        </div>
+        <div class="form_group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+        <button type="submit">SEND MESSAGE</button>
+      </form>
+    </div>
+  </div>
+</section>  
+<script src="script.js"></script> 
+</body>
+<footer>
+  <section id="footer">
+    <div class="wrapper">
+      <div class="text_right">
+        <p>&copy; 2026 Lauren Gregory</p>
+      </div>
+    </div>
+  </section>
+</footer>
+</html>
