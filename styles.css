@@ -1,0 +1,405 @@
+/**
+ * CORE CONFIG
+ * This powers everything from utility class generation to breakpoints
+ * to enabling/disabling pre-built components/utilities.
+ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  letter-spacing: -0.01em;
+  color: #222222;
+}
+
+/* All elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}
+
+:focus {
+  outline: 2px solid #ff7575;
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+}
+
+/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+  --space-2xs: clamp(0.5625rem, 0.5408rem + 0.1087vw, 0.625rem);
+  --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
+  --space-s: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --space-m: clamp(1.6875rem, 1.6223rem + 0.3261vw, 1.875rem);
+  --space-l: clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem);
+  --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
+  --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
+  --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
+}
+
+h1,
+.h1 {
+  font-size: var(--step-5);
+}
+
+h2,
+.h2 {
+  font-size: var(--step-4);
+}
+
+h3,
+.h3 {
+  font-size: var(--step-3);
+}
+
+h4,
+.h4 {
+  font-size: var(--step-2);
+}
+
+h5,
+.h5 {
+  font-size: var(--step-1);
+}
+
+/* define some constants */
+.flex {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+@media (max-width: 468px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+}
+.flex_center {
+  justify-content: center;
+}
+.flex_around {
+  justify-content: space-around;
+}
+.flex_between {
+  justify-content: space-between;
+}
+@media (max-width: 468px) {
+  .flex_around {
+    justify-content: center;
+  }
+  .flex_between {
+    justify-content: center;
+  }
+}
+.text_center {
+  text-align: center;
+}
+.text_right {
+  text-align: right;
+}
+
+/* define spacing */
+.padding-top-3xs {
+  padding: var(--space-3xs);
+}
+
+/* create the wrappers */
+.wrapper {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.wrapper_inner {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* Style the header */
+.site_header {
+  padding: var(--space-s) 0;
+  background:#ff7575;
+}
+
+.site_header_nav ul li a {
+  text-decoration: none;
+  color: #222222;
+  font-weight: 600;
+}
+
+/* Hero section styling */
+.hero_content {
+  padding: var(--space-3xl) 0;
+}
+
+/* 1. The Greeting */
+.hero_greeting {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;         /* Gentle space above your name */
+  opacity: 0.85;
+}
+
+/* 2. Your Name */
+.hero_content h1 {
+  margin-bottom: 12px;         /* Balanced space below your name */
+}
+
+/* 3. Junior Developer Title */
+.hero_content p.h5 {
+  margin-bottom: 8px;          /* Clean space before your focus area */
+  letter-spacing: 0.05em;
+}
+
+/* 4. Women's Health & Technology */
+.hero_subtitle {
+  font-size: 1.15rem;
+  opacity: 0.9;
+}
+.hero_social {
+  padding-top: var(--space-3xl);
+}
+.hero_social address {
+  font-style: normal;
+}
+/*Learned this this for smooth rounded edges and clean looking image*/
+.hero_social img{
+  border-radius: 12px;
+  object-fit: cover;
+}
+/* General styling for the hero section */
+section {
+  padding: var(--space-2xl) var(--space-l);
+}
+
+section#hero {
+  background: linear-gradient(135deg, #ff7575, #efbaca, #feeeef);
+  padding-bottom: 4px;
+  background-size: cover;
+  background-position: top;
+  background-attachment: scroll;
+}
+
+/* About section */
+.about_content {
+  padding: var(--space-xl) 0;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 48px;
+}
+.about_bio {
+  font-size: 1.35rem;
+  line-height: 1.65;
+  color: #222222;
+  max-width: 460px;
+
+}
+
+@media (max-width: 468px) {
+  .about_content {
+    transform: skewX(0deg);
+  }
+}
+
+.about_figure {
+  background-color: #ffffff;
+  border-radius: 16px;                     /* Rounded card container */
+  padding: 12px;                           /* Clean white border frame */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); /* Soft modern shadow */
+  border: 1px solid rgba(0, 0, 0, 0.08);   /* Subtle Bento border */
+  display: inline-block;
+}
+
+.about_img {
+  width: 350px;                            /* Made wider */
+  height: 420px;                           /* Made taller (portrait ratio) */
+  object-fit: cover;                       /* Fills nicely without distortion */
+  border-radius: 12px;                     /* Matches the image rounding */
+}
+
+.about_caption {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+section#about {
+  background-color: #ffffff;
+}
+
+/* work section */
+.work_logos {
+  margin-top: var(--space-xl);
+}
+
+/* Each project card container */
+.work_logos li {
+  flex: 1 1 200px;
+  max-width: 260px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Make every image fit neatly inside its card */
+.work_logos img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* Style the visible title */
+.work_title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+section#work {
+  background-color: #feeeef;
+}
+/* travel section */
+.travel_card {
+  max-width: 260px;
+  margin: var(--space-l) auto 0; /* Centers the card horizontally */
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.travel_img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover; /* Fills the card like a postcard without stretching */
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Matches the .work_title font styling */
+.travel_info h3 {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* contact section */
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff7575;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #e65c5c;
+}
+/* footer section */
+section#footer {
+  padding: var(--space-l) var(--space-l);
+}
