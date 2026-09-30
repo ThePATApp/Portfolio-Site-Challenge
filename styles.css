@@ -10,8 +10,6 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-
-/* Remove default margin */
 body,
 h1,
 h2,
@@ -24,40 +22,28 @@ dl,
 dd {
   margin: 0;
 }
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
   padding: 0;
 }
-
-/* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
 }
-
-/* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   letter-spacing: -0.01em;
   color: #222222;
 }
-
-/* All elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
-
-/* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
   display: block;
 }
-
-/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
@@ -131,8 +117,6 @@ h5,
 .h5 {
   font-size: var(--step-1);
 }
-
-/* define some constants */
 .flex {
   display: flex;
   align-items: center;
@@ -166,13 +150,9 @@ h5,
 .text_right {
   text-align: right;
 }
-
-/* define spacing */
 .padding-top-3xs {
   padding: var(--space-3xs);
 }
-
-/* create the wrappers */
 .wrapper {
   width: 100%;
   max-width: 1240px;
@@ -183,7 +163,6 @@ h5,
   max-width: 800px;
   margin: 0 auto;
 }
-/* Style the header */
 .site_header {
   padding: var(--space-s) 0;
   background:#ff7575;
@@ -194,34 +173,26 @@ h5,
   color: #222222;
   font-weight: 600;
 }
-
-/* Hero section styling */
 .hero_content {
   padding: var(--space-3xl) 0;
 }
 
-/* 1. The Greeting */
 .hero_greeting {
   font-size: 0.95rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: 10px;         /* Gentle space above your name */
+  margin-bottom: 10px;         
   opacity: 0.85;
 }
-
-/* 2. Your Name */
 .hero_content h1 {
-  margin-bottom: 12px;         /* Balanced space below your name */
+  margin-bottom: 12px;         
 }
-
-/* 3. Junior Developer Title */
 .hero_content p.h5 {
-  margin-bottom: 8px;          /* Clean space before your focus area */
+  margin-bottom: 8px;          
   letter-spacing: 0.05em;
 }
 
-/* 4. Women's Health & Technology */
 .hero_subtitle {
   font-size: 1.15rem;
   opacity: 0.9;
@@ -232,12 +203,11 @@ h5,
 .hero_social address {
   font-style: normal;
 }
-/*Learned this this for smooth rounded edges and clean looking image*/
+/*Learned this this for smooth rounded edges and clean looking images*/
 .hero_social img{
   border-radius: 12px;
   object-fit: cover;
 }
-/* General styling for the hero section */
 section {
   padding: var(--space-2xl) var(--space-l);
 }
@@ -250,7 +220,6 @@ section#hero {
   background-attachment: scroll;
 }
 
-/* About section */
 .about_content {
   padding: var(--space-xl) 0;
   max-width: 900px;
@@ -273,18 +242,18 @@ section#hero {
 
 .about_figure {
   background-color: #ffffff;
-  border-radius: 16px;                     /* Rounded card container */
-  padding: 12px;                           /* Clean white border frame */
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); /* Soft modern shadow */
-  border: 1px solid rgba(0, 0, 0, 0.08);   /* Subtle Bento border */
+  border-radius: 16px;                     
+  padding: 12px;                           
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); 
+  border: 1px solid rgba(0, 0, 0, 0.08);  
   display: inline-block;
 }
 
 .about_img {
-  width: 350px;                            /* Made wider */
-  height: 420px;                           /* Made taller (portrait ratio) */
-  object-fit: cover;                       /* Fills nicely without distortion */
-  border-radius: 12px;                     /* Matches the image rounding */
+  width: 350px;                            
+  height: 420px;                           
+  object-fit: cover;                       
+  border-radius: 12px;                     
 }
 
 .about_caption {
@@ -295,8 +264,6 @@ section#hero {
 section#about {
   background-color: #ffffff;
 }
-
-/* work section */
 .work_logos {
   margin-top: var(--space-xl);
 }
@@ -310,8 +277,6 @@ section#about {
   padding: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
-
-/* Make every image fit neatly inside its card */
 .work_logos img {
   width: 100%;
   height: 160px;
@@ -319,7 +284,6 @@ section#about {
   margin-bottom: 12px;
 }
 
-/* Style the visible title */
 .work_title {
   font-weight: 600;
   font-size: 0.95rem;
@@ -328,10 +292,9 @@ section#about {
 section#work {
   background-color: #feeeef;
 }
-/* travel section */
 .travel_card {
   max-width: 260px;
-  margin: var(--space-l) auto 0; /* Centers the card horizontally */
+  margin: var(--space-l) auto 0; 
   background-color: #ffffff;
   border-radius: 12px;
   padding: 16px;
@@ -341,18 +304,16 @@ section#work {
 .travel_img {
   width: 100%;
   height: 160px;
-  object-fit: cover; /* Fills the card like a postcard without stretching */
+  object-fit: cover; 
   border-radius: 8px;
   margin-bottom: 12px;
 }
 
-/* Matches the .work_title font styling */
 .travel_info h3 {
   font-weight: 600;
   font-size: 0.95rem;
 }
 
-/* contact section */
 .contact_form {
   display: flex;
   flex-direction: column;
@@ -399,7 +360,6 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #e65c5c;
 }
-/* footer section */
 section#footer {
   padding: var(--space-l) var(--space-l);
 }
