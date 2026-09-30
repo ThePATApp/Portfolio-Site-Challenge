@@ -13,7 +13,7 @@ contactForm.addEventListener('submit', function(event) {
  submitButton.textContent = "SEND MESSAGE";
   }, 3000);
 });
-// Dynamic Time-of-Day Greeting
+// Time-of-Day Greeting
 const greetingElement = document.getElementById('greeting');
 const currentHour = new Date().getHours(); // Returns 0 - 23 based on the visitor's clock
 
